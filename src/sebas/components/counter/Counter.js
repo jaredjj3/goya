@@ -12,6 +12,12 @@ class Counter extends Component {
     this.increment = this.increment.bind(this);
   }
 
+  componentDidUpdate(_prev_props, prev_state) {
+    if (this.state.count % 2 === 0) {
+      console.log('Counter updated!');
+    }
+  };
+
   decrement(_event) {
     const newState = { 
       ...this.state,
