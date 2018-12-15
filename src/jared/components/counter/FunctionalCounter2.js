@@ -3,19 +3,18 @@ import { compose, withStateHandlers } from 'recompose';
 
 const enhance = compose(
   withStateHandlers(
-    { count: 0 },
+    props => ({ count: props.initialCount }),
     {
-      increment: (state, _props) => (_event) => ({ count: state.count + 1 }),
-      decrement: (state, _props) => (_event) => ({ count: state.count - 1 })
+      increment: ({ count }) => _event => ({ count: count + 1 }),
+      decrement: ({ count }) => _event => ({ count: count - 1 })
     }
   )
-); 
+)
 
-export const FunctionalCounter = enhance(props => {
-  return <div>
-    Functional Counter 
+export const FunctionalCounter2 = enhance(props =>
+  <div>
     <button onClick={props.decrement}>-</button>
     {props.count}
     <button onClick={props.increment}>+</button>
   </div>
-});
+);

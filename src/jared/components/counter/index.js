@@ -1,2 +1,3 @@
 export * from './ClassCounter';
-export * from './FunctionalCounter';
+export * from './FunctionalCounter1';
+export * from './FunctionalCounter2';
