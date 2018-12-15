@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DoubleIncrement } from './DoubleIncrement';
 
 export class ClassCounter extends Component {
   constructor(props) {
@@ -43,6 +44,9 @@ export class ClassCounter extends Component {
         <div>
           <button onClick={this.decrement}>-</button>
           <button onClick={this.increment}>+</button>
+        </div>
+        <div>
+          <DoubleIncrement increment={this.increment} />
         </div>
       </div>
     );

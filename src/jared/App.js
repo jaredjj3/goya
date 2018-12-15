@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { ClassCounter } from './components/counter';
+import { ClassCounter, FunctionalCounter } from './components/counter';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <ClassCounter title="foo" />
+        <FunctionalCounter foo="bar" />
       </div>
     );
   }
